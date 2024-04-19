@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca-Cola</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        nav ul {
+            list-style: none;
+            padding: 0;
+            background-color: #333;
+        }
+
+        nav ul li {
+            display: inline-block;
+            padding: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function() {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const sectionId = this.getAttribute('href');
+                    const section = document.querySelector(sectionId);
+                    section.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
+        </ul>
+    </nav>
+    <header>
+        <img src="cocacola-logo.png" alt="Coca-Cola Logo">
+        <h1>Coca-Cola</h1>
+        <p>The real thing since 1886</p>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt aliquam, nunc nisl tincidunt velit, eget bibendum nunc nisl vel nisl. Sed euismod, nunc et tincidunt aliquam, nunc nisl tincidunt velit, eget bibendum nunc nisl vel nisl.</p>
+        </section>
+        <section id="products">
+            <h2>Products</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt aliquam, nunc nisl tincidunt velit, eget bibendum nunc nisl vel nisl. Sed euismod, nunc et tincidunt aliquam, nunc nisl tincidunt velit, eget bibendum nunc nisl vel nisl.</p>
+        </section>
+        <section id="services">
+            <h2>Services</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt aliquam, nunc nisl tincidunt velit, eget bibendum nunc nisl vel nisl. Sed euismod, nunc et tincidunt aliquam, nunc nisl tincidunt velit, eget bibendum nunc nisl vel nisl.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2022 Coca-Cola. All rights reserved.</p>
+    </footer>
+</body>
+</html>
